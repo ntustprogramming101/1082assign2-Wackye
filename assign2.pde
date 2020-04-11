@@ -203,21 +203,26 @@ void keyPressed(){
   if (key == CODED) {
     switch (keyCode) {
       case DOWN:
-        downPressed = true;
-        noPressed = false;
-        hogIdleY += GRID;
-        if (hogIdleY >= height){
-          hogIdleY = GRID*5;
+        if(downPressed == false){
+          downPressed = true;
+          noPressed = false;
+          hogIdleY += GRID;
+          if (hogIdleY >= height){
+            hogIdleY = GRID*5;
+          }
         }
         break;
+        
       case LEFT:
-        leftPressed = true;
-        noPressed = false;
-        hogIdleX -= GRID;
-        if(hogIdleX <= 0){
-          hogIdleX = 0;
+        if(leftPressed == false)
+          {leftPressed = true;
+          noPressed = false;
+          hogIdleX -= GRID;
+          if(hogIdleX <= 0){
+            hogIdleX = 0;
+          }
         }
-        break;
+          break;
       case RIGHT:
         rightPressed = true;
         noPressed = false;
