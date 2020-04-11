@@ -199,6 +199,7 @@ void draw() {
 }
 
 void keyPressed(){
+  println("keyPressed");
   if (key == CODED) {
     switch (keyCode) {
       case DOWN:
@@ -230,6 +231,7 @@ void keyPressed(){
 }
 ////////
 void keyReleased(){
+println("keyReleased");
     if (key == CODED) {
     switch (keyCode) {
       case DOWN:
